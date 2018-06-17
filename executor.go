@@ -47,7 +47,7 @@ LOOP:
 				continue
 			}
 			// since spawning, cannot handle error here
-			e.execute(t)
+			go e.execute(t)
 
 		case <-e.quit:
 			break LOOP
